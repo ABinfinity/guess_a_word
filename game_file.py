@@ -20,12 +20,13 @@ def intro():
 	time.sleep(1.5)
 
 
-def fails(turns):
+def fails(turns,word):
 	turns -=1
 	print("Wrong")
 	print("You have", + turns, 'lives')
 	if turns == 0:           
-		print ("You Loose" )
+		print ("You Loose!!" )
+		print('The real answer was "'+word+'"' )
 	
 	return turns
 
@@ -76,7 +77,7 @@ if __name__ == '__main__':
 		guesses += guess.lower()                    
 	 
 		if guess.lower() not in word:  
-			turns = fails(turns)        
+			turns = fails(turns,word)        
 			
 		
 		else:
