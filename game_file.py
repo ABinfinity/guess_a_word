@@ -57,8 +57,7 @@ def word_list():
 
 if __name__ == '__main__':
 	intro()
-	want = input("Continue..?(y/n)")
-	print(want.lower())
+	want = input("Continue..?(y/n)")[0]
 	if want.lower() == "n":
 		sys.exit()
 
